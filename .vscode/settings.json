@@ -31,5 +31,11 @@
         ".vscode{,/**}"
     ],
     "appService.defaultWebAppToDeploy": "/subscriptions/465f2c30-1146-4417-afbe-dd790199d750/AppServices/subscriptions/465f2c30-1146-4417-afbe-dd790199d750/resourceGroups/az-dev-udacity/providers/Microsoft.Web/sites/migr-az-udc-dev",
-    "appService.deploySubpath": "web"
+    "appService.deploySubpath": "web",
+    "azureFunctions.deploySubpath": "function",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen"
 }

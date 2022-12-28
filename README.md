@@ -61,11 +61,21 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource | Service Tier | Monthly Cost |
-| ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
+| Azure Resource   | Service Tier | Monthly Cost |
+| ---------------- | ------------ | -------------- |
+| Azure PostgreSQL |   Basic      |   $54.64       |
+| Azure Service Bus|   Basic      |   $0.05        |
+| Azure App Service|   Basic (B1) |   $12.50      |
+| Azure Function App|   Free Tier  |   $0          |
+| Azure Storage    |   Basic      |   $0.10        |
+| Total            |              |   $67.92      |
+
+The app service includes the web app and the function app.
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+
+- The overhead for PostgresSQL is the most used in this architecture.
+- Service bus is the best choice for handle the notifcations.
+- Using function apps reduces deployment costs and accelerates development.
+- Using an app service can scale up/down to suit the needs at different times.
+- Need to reduce the cost for the database.

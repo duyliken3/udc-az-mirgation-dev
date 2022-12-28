@@ -7,15 +7,15 @@ class BaseConfig:
     POSTGRES_URL="az-postgre-mi-udc-dc.postgres.database.azure.com"
     POSTGRES_USER="az_admin@az-postgre-mi-udc-dc" #
     POSTGRES_PW="th3_flatw0rld"   #
-    POSTGRES_DB="techconfdb"   #TODO: Update value
+    POSTGRES_DB="techconfdb"   
     DB_URL = 'postgresql://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
     SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI') or DB_URL
     CONFERENCE_ID = 1
     SECRET_KEY = 'LWd2tzlprdGHCIPHTd4tp5SBFgDszm'
     SERVICE_BUS_CONNECTION_STRING ='Endpoint=sb://notificationqueue01.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xs3dIqFUl3+CkQepZo++xKFyqTNKNx6z2IqaaPFRw8o='
-    SERVICE_BUS_QUEUE_NAME ='notificationqueue01'
-    ADMIN_EMAIL_ADDRESS: 'info@techconf.com'
-    SENDGRID_API_KEY = '' #Configuration not required, required SendGrid Account
+    SERVICE_BUS_QUEUE_NAME ='notificationqueue'
+    ADMIN_EMAIL_ADDRESS: 'duyliken2@gmail.com'
+    SENDGRID_API_KEY = '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' #Configuration not required, required SendGrid Account
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
